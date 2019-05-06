@@ -1,0 +1,19 @@
+<StackLayout>
+    <TextField [(ngModel)]="val1"
+        hint="Enter the number"
+        (ngModelChange)="calculate()"
+        keyBoardType="number"
+        autocorrect="false"></TextField>
+
+        <ListPicker [items]="operations"
+        selectedIndex="0"
+        (selectedIndexChange)="changeOperator($event)
+        "></ListPicker>
+
+<TextField [(ngModel)]="val2"
+        hint="Enter a number"
+        (ngModelChange)="calculate($event)"
+        keyBoardType="number"
+        autocorrect="false"></TextField>
+<Label [text]="result"></Label>
+</StackLayout>
